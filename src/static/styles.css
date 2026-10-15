@@ -58,20 +58,113 @@ section h3 {
 }
 
 .activity-card {
-  margin-bottom: 15px;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid #e0e4f0;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(26, 35, 126, 0.07);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.activity-card:hover {
+  box-shadow: 0 5px 14px rgba(26, 35, 126, 0.12);
+  transform: translateY(-2px);
 }
 
 .activity-card h4 {
   margin-bottom: 10px;
   color: #0066cc;
+  font-size: 1.1rem;
 }
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-participants {
+  margin-top: 16px;
+  padding: 13px 15px;
+  border: 1px solid #e2e7f5;
+  border-radius: 8px;
+  background-color: #f5f7fc;
+}
+
+.activity-participants h5 {
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-size: 0.95rem;
+}
+
+.activity-participants ul {
+  padding: 0;
+  list-style: none;
+  color: #444b60;
+}
+
+.activity-participants li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 5px 0;
+  border-bottom: 1px solid #e2e7f5;
+}
+
+.activity-participants li:last-child {
+  border-bottom: 0;
+}
+
+.activity-participants li span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.participant-delete {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 6px;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  color: #9e3340;
+}
+
+.participant-delete:hover {
+  border-color: #f1c4c8;
+  background-color: #fff0f1;
+  color: #b42332;
+}
+
+.participant-delete:focus-visible {
+  outline: 2px solid #5266bd;
+  outline-offset: 2px;
+}
+
+.participant-delete:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.participant-delete svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.activity-participants .participants-empty {
+  margin: 0;
+  color: #747b8c;
+  font-size: 0.9rem;
+  font-style: italic;
 }
 
 .form-group {
